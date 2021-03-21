@@ -1,0 +1,56 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Blinker', sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $font_color;
+
+    @media ($small) {
+        font-size: 14px;
+        font-size: 0.85rem;
+    }
+}
+
+a {
+    font-weight: 500;
+    color: inherit;
+    transition: color 0.5s;
+    
+    &:not(.btn):hover {
+        color: $accent_color;
+    }
+}
+
+.main {
+    flex: 1;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.hide.hide {
+    display: none;
+}
+
+.fade-in {
+    animation: fade_in 0.2s ease-out 1;
+    opacity: 1;
+}
+
+.fade-out {
+    animation: fade_out 0.5s ease-out 1;
+    opacity: 0;
+}

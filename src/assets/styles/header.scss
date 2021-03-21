@@ -1,0 +1,16 @@
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    padding: 10px 0;
+    color: $accent_font_color;
+    background-color: $accent_color;
+
+    &__title {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}

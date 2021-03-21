@@ -1,0 +1,136 @@
+.contacts {
+    margin: 65px 0 20px;
+
+    &__load-more__holder {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.contacts-list {
+    &__item {
+        margin-bottom: 20px;   
+        border: 1px solid $accent_color;
+        border-radius: 5px;
+    }
+
+    &__heading {
+        margin: 0;
+        padding: 5px 35px 5px 5px;
+        position: relative;
+        background-color: $accent_color;
+        color: $accent_font_color;
+        line-height: 1.5;
+        font-size: 1.1rem;
+        font-weight: 400;
+        cursor: pointer;
+        word-break: break-all;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: $accent_font_color;
+            right: 30px;
+        }
+    
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 10px;
+            top: 50%;
+            right: 7px;
+            transform: translateY(-50%);
+            transition: all 0.5s;
+            background-image: url('../img/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    
+        .open & {
+            &::after {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+
+    &__email {
+        .open & {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: none;
+        padding: 30px 10px;
+        @media ($small) {
+            padding-bottom: 10px;
+        }
+    
+        .open & {
+            display: block;
+        }
+    }
+
+    &__buttons {
+        margin-top: 30px;
+        text-align: center;
+        .btn:first-child {
+            margin-right: 20px;
+            @media ($x_small) {
+                margin: 0 0 10px;
+            }
+        }
+    }
+
+    &__presonal-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media ($small) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        display: block;
+        max-width: 128px;
+        max-height: 128px;
+        
+        @media ($small) {
+            margin: 0 auto 30px;
+        }
+    }
+
+    &__full-data {
+        margin: 0 10px;
+
+        &__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            line-height: 1.5;
+            word-break: break-all;
+            li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__map {
+        display: block;
+        width: 250px;
+        height: 128px;
+        border: none;
+
+        @media ($small) {
+            display: none;
+        }
+    }
+}

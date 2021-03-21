@@ -1,0 +1,10 @@
+.footer {
+    padding: 10px 0;
+    background-color: $accent_color;
+    color: $accent_font_color;
+
+    &__copy {
+        margin: 0;
+        font-weight: 300;
+    }
+}
